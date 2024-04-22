@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DATA1700 Oblig3</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <h3>Bestilling av kinobilletter</h3>
+      <form class="form">
+        <label for="film">Velg film:</label>
+        <select class="form-select"  id="film">
+          <option>Inception</option>
+          <option>Harry Potter</option>
+          <option>Varg Veum</option>
+          <option>Tornerose</option>
+          <option>Mamma Mia</option>
+        </select>
+        <br>
+
+        <div class="form-group">
+          <label for="antall">Antall:</label>
+          <input type="text" class="form-control" id="antall"/>
+          <div id="feilantall" style="color:red"></div>
+        </div>
+        <div class="form-group">
+          <label for="fornavn">Fornavn:</label>
+          <input type="text" class="form-control" id="fornavn"/>
+          <div id="feilfornavn" style="color:red"></div>
+        </div>
+        <div class="form-group">
+          <label for="etternavn">Etternavn:</label>
+          <input type="text" class="form-control" id="etternavn"/>
+          <div id="feiletternavn" style="color:red"></div>
+        </div>
+        <div class="form-group">
+          <label for="telefonnummer">Telefonnummer:</label>
+          <input type="text" class="form-control" id="telefonnummer"/>
+          <div id="feiltelefonnr" style="color:red"></div>
+        </div>
+        <div class="form-group">
+          <label for="epost">Epost:</label>
+          <input type="text" class="form-control" id="epost"/>
+          <div id="feilepost" style="color:red"></div>
+        </div>
+
+      </form>
+
+      <br>
+
+      <button class="btn btn-primary" onclick="registrerBillett()">Kjøp billett</button>
+    </div>
+
+    <div class="col-md-8">
+      <h3>Alle billetter:</h3>
+      <div id="alleBilletter" class="table-responsive"></div>
+      <button class="btn btn-danger" onclick="slettBilletter()">Slett alle billettene</button>
+    </div>
+
+
+  </div>
+</div>
+
+
+<script src="index.js"></script>
+</body>
+</html>
